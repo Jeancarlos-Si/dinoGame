@@ -38,18 +38,18 @@ function jump() {
 
 function createCactus() {
     const cactus = document.createElement('div'); //Cria uma div
-    let cactusPosition = 1000;
-    let randomTime = Math.random() * 7500;
+    let cactusPosition = 750;
+    let randomTime = Math.random() * 10000000;
 
     cactus.classList.add('cactus'); //Adiciona uma classe a div
-    cactus.style.left = 1000 + 'px'; //Posicionamente da div na tela
+    
     background.appendChild(cactus); //Afirma que a div vai está alocada dentro de background
 
     let leftInterval = setInterval(() => {
-        if (cactusPosition <- 60){
+        if (cactusPosition < -0){
             clearInterval(leftInterval);
             background.removeChild(cactus);
-        }else if(cactusPosition > 0 && cactusPosition <60 && position < 60){
+        }else if(cactusPosition > 0 && cactusPosition < 80 && position < 60){
             //Game Over
             clearInterval(leftInterval);
             document.body.innerHTML = '<h1 class="game-over">Perdeu feio</h1>';
