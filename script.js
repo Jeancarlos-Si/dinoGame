@@ -38,7 +38,7 @@ function jump() {
 
 function createCactus() {
     const cactus = document.createElement('div'); //Cria uma div
-    let cactusPosition = 750;
+    let cactusPosition = 7500;
     let randomTime = Math.random() * 10000000;
 
     cactus.classList.add('cactus'); //Adiciona uma classe a div

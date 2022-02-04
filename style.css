@@ -47,7 +47,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); /*Solução para alinhar o conteudo ao centro(translate vai diminui pelo tamanho da imagem*/
     
-    background-image: url(./img/background.png);
+    background-image:linear-gradient(350deg, rgba(241, 255, 0, 1) 48%, rgba(255, 59, 0, 1) 100%), url(./img/background.png);
     background-repeat:repeat-x;
     animation: slideright 600s infinite linear;
     width: 750px;
