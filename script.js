@@ -38,15 +38,15 @@ function jump() {
 
 function createCactus() {
     const cactus = document.createElement('div'); //Cria uma div
-    let cactusPosition = 7500;
-    let randomTime = Math.random() * 10000000;
+    let cactusPosition = 750;
+    let randomTime = Math.random() * 6000;
 
     cactus.classList.add('cactus'); //Adiciona uma classe a div
     
     background.appendChild(cactus); //Afirma que a div vai está alocada dentro de background
 
     let leftInterval = setInterval(() => {
-        if (cactusPosition < -0){
+        if (cactusPosition <= 0){
             clearInterval(leftInterval);
             background.removeChild(cactus);
         }else if(cactusPosition > 0 && cactusPosition < 80 && position < 60){
