@@ -1,4 +1,4 @@
-<img src="./img/demostracao.PNG" alt="exemplo imagem">
+<img src="demostracao.PNG" alt="exemplo imagem">
 
 # Dino-Game
 
