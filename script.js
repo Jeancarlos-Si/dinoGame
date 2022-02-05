@@ -1,7 +1,12 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
+const scoreContainer = document.querySelector('#score');
+
+
 let isJumping = false;
 let position = 0;
+
+
 
 function handleKeyUp(event) {
     if(event.keyCode === 32 || event.keyCode === 38 || event.keyCode === 87 ) {
@@ -14,10 +19,12 @@ function handleKeyUp(event) {
 function jump() {
     isJumping = true;
     let upInterval = setInterval(() => {  //codigo Tudo que estiver dentro ficara 
-        if (position >= 150){             //sendo executado no periodo de tempo pre-determinado
+        if (position >= 170){             //sendo executado no periodo de tempo pre-determinado
             clearInterval(upInterval);
             console.log("entrei")
         //Descendo
+
+        
             let downInterval = setInterval(() => {
             if(position <= 0){
                 clearInterval(downInterval);
@@ -26,7 +33,8 @@ function jump() {
                 position -= 15;
                 dino.style.bottom = position + "px";
             }
-        }, 20);
+            
+        }, 50);
             //Subindo
         }else{
             position += 20;
@@ -37,6 +45,7 @@ function jump() {
 }
 
 function createCactus() {
+    
     const cactus = document.createElement('div'); //Cria uma div
     let cactusPosition = 750;
     let randomTime = Math.random() * 6000;
@@ -60,6 +69,33 @@ function createCactus() {
     }, 20);
     setTimeout(createCactus, randomTime);
 }
+
+function createScore() {
+    /*html*/
+    scoreContainer.insertAdjacentHTML('afterbegin',
+    `<div class="scoreText">
+        Score
+    </div>
+    <div class="scorePoints">
+        
+    </div>
+    `
+    )
+}
+
+function calcScore() {
+    const scoreClass = document.querySelector('.scorePoints');
+
+    scoreClass.insertAdjacentHTML('afterbegin',
+      `
+      $
+      `);
+
+      
+
+}
+createScore();
+calcScore();
 
 createCactus();
 document.addEventListener('keyup', handleKeyUp); 

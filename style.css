@@ -6,15 +6,34 @@ body {
     margin-left:auto;
     overflow-y: hidden;
     overflow-x: hidden;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .dino {
-    width: 60px;
-    height: 60px;
-    background-image: url(./img/dino.png);
+    width: 80px;
+    height: 80px;
+    background-image: url(./img/galinhaPix.png);/*É importante lembrar estamos usando um background como image*/
+    background-repeat: no-repeat; /*Propriedade para não repetição */
+    background-size: 100% 100%; /*Tamanho do background-image que vai ser ocupado pelo valor especifico que vou colocar em width e height*/
     position: absolute;
     left: 20px;
-    bottom: 0; /*Manda pra baixo*/
+    bottom:0;
+     /*Manda pra baixo*/
+}
+
+#score{
+    position: relative;
+    display: flex;
+    left: 20px;
+    top: 20px;
+    width: 150px;
+    height: 40px;
+    font-size:1.5em;
+}
+
+.scorePoints {
+    color: red;
+    margin-left: 10px;
 }
 
 .cactus {
