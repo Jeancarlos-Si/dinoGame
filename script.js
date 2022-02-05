@@ -23,7 +23,7 @@ function jump() {
                 clearInterval(downInterval);
                 isJumping = false;
                 }else{
-                position -= 20;
+                position -= 15;
                 dino.style.bottom = position + "px";
             }
         }, 20);
